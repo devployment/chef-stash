@@ -6,7 +6,7 @@ default['stash']['install_type'] = 'standalone'
 default['stash']['service_type'] = 'init'
 default['stash']['url_base']     = 'http://www.atlassian.com/software/stash/downloads/binary/atlassian-stash'
 default['stash']['user']         = 'stash'
-default['stash']['version']      = '3.3.2'
+default['stash']['version']      = '3.6.0'
 
 default['stash']['url']      = "#{node['stash']['url_base']}-#{node['stash']['version']}.tar.gz"
 default['stash']['checksum'] =
@@ -85,6 +85,7 @@ when '3.2.5' then '1b1a5074643a26369110a41b634b50194900715253b193ac79742a23f8081
 when '3.3.0' then '4cb441824c08f28550d5ee2f883016461a356f626e5f38c0a29d345f174d34fd'
 when '3.3.1' then 'cea015548d80ec10aaf405432de46bb5acade17ea024ce270fa2a4afd6e52cf9'
 when '3.3.2' then '08251e15d91374de5da46f9739a1747312dead1509a72268d49abca21607bbe9'
+when '3.6.0' then 'e047b2f9a8438a1be066080ea5210177b891fc952b776b5509e555427e0cbe91'
 end
 
 default['stash']['apache2']['access_log']         = ''
@@ -112,7 +113,7 @@ default['stash']['backup_client']['baseurl']      = "https://#{node['fqdn']}/"
 default['stash']['backup_client']['install_path'] = node['stash']['install_path']
 default['stash']['backup_client']['password']     = 'changeit'
 default['stash']['backup_client']['user']         = 'admin'
-default['stash']['backup_client']['version']      = '1.5.0'
+default['stash']['backup_client']['version']      = '1.6.0'
 stash_backup_client_version = Chef::Version.new(node['stash']['backup_client']['version'])
 
 default['stash']['backup_client']['url_base']     =
@@ -141,6 +142,7 @@ when '1.3.0' then 'b9674f3235d4937d39186417594efdb3213b564d783aa09618a8086cc57f5
 when '1.3.1' then '625af0a8402e85d62768f99a409ce4e140ef3afc961514b549fb9f98877c39db'
 when '1.4.0' then 'c57a5fafb8aaaccea0bd57aae0bce24472ee6d172c0a558c11759b26b6c0196c'
 when '1.5.0' then '6f7180a507a0e4c147e2c6a1fa82daf273e038243acefaa39fa7363472164765'
+when '1.6.0' then '6605a8fbeab3f60567832f2bdba790583646b7ba637eee5b1da8148b5ecacf97'
 end
 
 default['stash']['backup_client']['cron']['day'] = '*'
